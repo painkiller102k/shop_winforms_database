@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -96,7 +96,7 @@ namespace shopDB
         private void LoadProducts()
         {
             connect.Open();
-            dtProducts = new DataTable();
+            dtProducts = new DataTable(); // object klass
             adapter = new SqlDataAdapter("SELECT Id, Toodenimetus, Kogus, Hind, Bpilt FROM Toodetabel", connect);
             adapter.Fill(dtProducts);
             connect.Close();
